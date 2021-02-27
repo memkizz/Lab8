@@ -1,5 +1,5 @@
-const re = require('../assets/scripts/main.js');  
-describe('Test all possible branchjes of the volumeIcon', () => {
+const formatVolumeIconPath = require('../assets/scripts/main.js');  
+describe('Test all possible branches of the volumeIcon', () => {
     test('high volume', () => {
         expect(formatVolumeIconPath(100)).toEqual(`./assets/media/icons/volume-level-3.svg`);
     });
