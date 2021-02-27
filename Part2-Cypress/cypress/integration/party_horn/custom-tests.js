@@ -54,7 +54,7 @@ describe('Party Horn Tests', () => {
       expect($el).to.have.equal("./assets/media/icons/volume-level-2.svg");
     })
   })
-  it('Test if the volume image changes when 0', () => {
+  it('Test if the volume image changes when 90', () => {
     cy.get('#volume-slider').invoke('val', 90).trigger('input');
     cy.get('#volume-image').invoke('attr', 'src').then(($el) => {
       expect($el).to.have.equal("./assets/media/icons/volume-level-3.svg");
@@ -73,7 +73,7 @@ describe('Party Horn Tests', () => {
     });
   });
   //Test if an error is shown when you type a number outside of the given range for the volume textbox input
-  it('test for error', () => {
+  it('test for error with number outside of range', () => {
     cy.get('#volume-number').invoke('val', 140).then(() => {
       cy.get('input:valid').should('exist');
 
